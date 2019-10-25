@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Blog-Blog-Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a> 
+  <a href="#pokemon" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Pokemon</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">About Ash</a> 
+  <a href="#footer" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Footer</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Pokemon</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Photo grid -->
+  <div id="pokemon" class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+      <img src="../myBlog/img/torchic.jpg" style="width:100%" onclick="onClick(this)" alt="Torchic">
+      <img src="../myBlog/img/treecko.jpg" style="width:100%" onclick="onClick(this)" alt="Treecko">
+      <img src="../myBlog/img/mudkip.jpg" style="width:100%" onclick="onClick(this)" alt="Mudkip">
+   </div>
+    
+   <div class="w3-quarter">
+      <img src="../myBlog/img/combusken.jpg" style="width:100%" onclick="onClick(this)" alt="Combusken">
+      <img src="../myBlog/img/grovyle.jpg" style="width:100%" onclick="onClick(this)" alt="Grovyle">
+      <img src="../myBlog/img/marshtomp.jpg" style="width:100%" onclick="onClick(this)" alt="Marshtomp">
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="../myBlog/img/blaziken.jpg" style="width:100%" onclick="onClick(this)" alt="Blaziken">
+      <img src="../myBlog/img/sceptile.jpg" style="width:100%" onclick="onClick(this)" alt="Sceptile">
+      <img src="../myBlog/img/swampert.jpg" style="width:100%" onclick="onClick(this)" alt="Swampert">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="../myBlog/img/blaziken-mega.jpg" style="width:100%" onclick="onClick(this)" alt="Mega Blaziken">
+      <img src="../myBlog/img/sceptile-mega.jpg" style="width:100%" onclick="onClick(this)" alt="Mega Sceptile">
+      <img src="../myBlog/img/swampert-mega.jpg" style="width:100%" onclick="onClick(this)" alt="Mega Swampert">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="../myBlog/index.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="../myBlog/index.html" class="w3-bar-item w3-button w3-button">1</a>
+      <a href="../myBlog/sample 2.html" class="w3-bar-item w3-black w3-hover-black">2</a>
+      <a href="../myBlog/sample 2.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="../myBlog/sample 3.html" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="../myBlog/sample 2.html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About Ash</b></h4>
+    <img src=".//img/Ash.png" alt="Me" class="w3-image w3-padding-32" width="200" height="250">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>Ash Ketchum, known as Satoshi (サトシ) in Japan</h4>
+      <p>
+        Ash has always dreamed of becoming a Pokémon Master and as soon as he hit the age of 10 he rushed to
+         Professor Oak's Laboratory to get his first Pokémon. Originally wanting to choose Squirtle, Ash ended 
+         up getting the Pokémon Pikachu and left on his journey. Starting off as a completely unskilled trainer,
+         sh managed to go through, with the assistance of his friends Misty & Brock and capture new Pokémon and 
+         defeat the gyms in Kanto, allowing him to enter in the Pokémon League. Since then he has continued to 
+         travel, make new friends and capture new Pokémon while still following his goal of becoming a Pokémon 
+         Master. Since this goal is so close to his heart, he sometimes acts a bit rash and rushes to the next 
+         battle he can as fast as possible.
+      </p>
+      <p>Home: Pallet Town</p>
+      <p>Family: <br>	
+          Delia Ketchum (mother)<br>
+          Unnamed father<br>
+          Unnamed grandfather and grandmother</p>
+      <hr >
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>Pokemon</h3>
+        <p>
+          Also known as Pocket Monsters in Japan, is a media franchise managed by The Pokémon Company, 
+          a Japanese consortium between Nintendo, Game Freak, and Creatures.  The franchise was created by 
+          Satoshi Tajiri in 1995, and is centered on fictional creatures called "Pokémon", which humans, 
+          known as Pokémon Trainers, catch and train to battle each other for sport. The English slogan 
+          for the franchise is "Gotta Catch 'Em All". 
+        </p>      
+      </div>
+    
+      <div class="w3-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="..//myBlog/img/Pokeball.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Pokeball</span><br>
+            <span>Different pokeballs</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="../myBlog/img/Bag.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Bag</span><br>
+            <span>Item Storage</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>Pokemon League</h3>
+        <p>
+          <span class="w3-tag w3-white w3-small w3-margin-bottom w3-hover-black">Kanto League</span> 
+          <span class="w3-tag w3-white w3-small w3-margin-bottom w3-hover-black">Johto League</span> 
+          <span class="w3-tag w3-white w3-small w3-margin-bottom w3-hover-black">Hoenn League</span> 
+          <span class="w3-tag w3-white w3-small w3-margin-bottom w3-hover-black">Sinnoh League</span> 
+          <span class="w3-tag w3-white w3-small w3-margin-bottom w3-hover-black">Unova League</span> 
+          <span class="w3-tag w3-white w3-small w3-margin-bottom w3-hover-black">Kalos League</span>
+          <span class="w3-tag w3-white w3-small w3-margin-bottom w3-hover-black">Alola League</span> 
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <div id="footer" class="w3-black w3-center w3-padding-21">Copyright &copy <a>2019</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
